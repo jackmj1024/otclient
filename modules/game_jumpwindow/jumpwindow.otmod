@@ -1,0 +1,11 @@
+Module
+  name: game_jumpwindow
+  description: Custom UI window for Question 7!
+  author: Jackson Jones
+  website: https://github.com/jackmj1024/tavernlight-trial
+  sandboxed: true
+  dependencies: [ game_interface ]
+  scripts: [ jumpwindow ]
+  autoload: true
+  @onLoad: init()
+  @onUnload: terminate()

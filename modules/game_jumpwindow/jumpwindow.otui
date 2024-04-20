@@ -1,0 +1,16 @@
+JumpWindow < MainWindow
+  id: jumpWindow
+  size: 300 300
+
+  @onEnter: modules.game_jumpwindow.destroyWindow()
+  @onEscape: modules.game_jumpwindow.destroyWindow()
+
+  Button
+    id: jumpButton
+    width: 50
+    !text: tr("Jump!")
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 200 
+    margin-left: 200
+    @onClick: modules.game_jumpwindow.buttonJump()
