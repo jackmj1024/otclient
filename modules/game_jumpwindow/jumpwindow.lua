@@ -65,16 +65,16 @@ function onJumpWindow()
 end
 
 function startButtonMovement()
-	-- Return if the jumpButton reference has not been set.
-	if not jumpButton then
-		return
-	end
-	
 	-- Start the recursive movement sequence.
        	scheduleEvent(function() buttonMove() end, BUTTON_MOVE_DELAY)
 end
 
 function buttonMove()
+	-- Return if the jumpButton reference has not been set.
+	if not jumpButton then
+		return
+	end
+	
 	-- Change X position by the defined amount.
 	local newX = jumpButton:getMarginLeft() - BUTTON_MOVE_DISTANCE
 	jumpButton:setMarginLeft(newX)
